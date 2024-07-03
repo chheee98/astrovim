@@ -15,5 +15,10 @@ if not pcall(require, "lazy") then
   vim.cmd.quit()
 end
 
+vim.api.nvim_set_hl(0, "Visual", { bg = "#d9800b", fg = "#ffffff" })
+
+local mason_bin = "/Users/chheee/.local/share/nvim/mason/bin"
+vim.env.PATH = mason_bin .. ":" .. vim.env.PATH
+
 require "lazy_setup"
 require "polish"
